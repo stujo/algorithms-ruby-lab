@@ -4,7 +4,7 @@ A programmer interview
 
 #Tweetlio 
 
-You've seen a cool job posting for a software developer at Tweelio, the first thing they asked you to do was to complete an online programming test.
+You've seen a cool job posting for a software developer at Tweetlio, the first thing they asked you to do was to complete an online programming test.
 
 Good luck!
 
