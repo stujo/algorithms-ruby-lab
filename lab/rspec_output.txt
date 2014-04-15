@@ -2,22 +2,45 @@
 MathExpert
   #calculate_factorial_iterative
     should take 1 argument (1)
-    should return 24 for 4 (FAILED - 1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+  #calculate_factorial_recursive
+    should take 1 argument (1)
+    should return 24 for 4
+    should return 120 for 5
+    should return 39916800 for 11
+
+RandomArrayGenerator
+  #generate_random_array
+    should take 3 arguments (size, min, max)
+    should return nil if size is < 0
+    should return nil if min > max
+    should return an array
+    should return [] if size == 0
+    should return an array with length of the (size) parameter
+    should return an array of integers
+    should not return integers less than the min parameter
+    should not return integers greater than the max parameter
+    should return an array of random integers
+
+TraineeGroceryBagger
+  #pack
+    should take 1 argument (items_array)
+    should return nil if items_array is nil (FAILED - 1)
 
 Failures:
 
-  1) MathExpert#calculate_factorial_iterative should return 24 for 4
-     Failure/Error: expect(MathExpert.calculate_factorial_iterative(4)).to eq 24
-       
-       expected: 24
-            got: 4
-       
-       (compared using ==)
-     # /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:9:in `block (3 levels) in <top (required)>'
+  1) TraineeGroceryBagger#pack should return nil if items_array is nil
+     Failure/Error: expect(TraineeGroceryBagger.pack(nil)).to eq nil
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     # ./lib/traineegrocerybagger.rb:17:in `pack'
+     # /Users/tylair/GA_labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:225:in `block (3 levels) in <top (required)>'
 
-Finished in 0.0015 seconds
-2 examples, 1 failure
+Finished in 0.03294 seconds
+20 examples, 1 failure
 
 Failed examples:
 
-rspec /work/labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:8 # MathExpert#calculate_factorial_iterative should return 24 for 4
+rspec /Users/tylair/GA_labs/algorithms-ruby-lab/shared/spec/lab_spec.rb:224 # TraineeGroceryBagger#pack should return nil if items_array is nil
