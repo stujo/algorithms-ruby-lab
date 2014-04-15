@@ -32,12 +32,41 @@ module Searcher
   # Expects haystack to be an array of integers
   # Expects haystack to be a sorted (low [0] to high [length])
 
-  def self.find_by_binary_search(needle, haystack)
+	def self.find_by_binary_search(needle, haystack)
 
-    #TODO: Give it a go!
-    #Plan out you algorithm
-
-    false
-  end
-
+		low = 0
+		high = haystack.length - 1
+		midpoint = 0
+ 
+    	while low <= high
+        	midpoint = low + (high - low) / 2; 
+        	if needle == haystack[midpoint]                
+            	return true
+        	elsif needle < haystack[midpoint]
+            	high = midpoint - 1
+        	else
+            	low = midpoint + 1
+ 			end
+ 		end
+ 		return false
+	end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
