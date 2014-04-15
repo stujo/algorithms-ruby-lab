@@ -6,15 +6,23 @@ module MathExpert
   #answer = (n) * (n-1) * (n-2) * (n-3) * (n-4) * (n-5) ...
 
   #iterative
-  def self.calculate_factorial_iterative n
+  def self.calculate_factorial_iterative (n)
     #TODO: Implement factorial using a loop
-    n
-  end
+    i = 1
+    until n == 1 do 
+      i = (n * i)
+      n -= 1
+    end
+  return i
+end
+
 
   #recursive
-  def self.calculate_factorial_recursive n
-    #TODO: Implement factorial using recursion
-    n
+  def self.calculate_factorial_recursive (n)
+    if n == 0
+      1
+    else n * self.calculate_factorial_recursive(n -1)
+    end
   end
 
 
