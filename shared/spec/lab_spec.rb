@@ -84,64 +84,64 @@ describe RandomArrayGenerator do
   end
 end
 
-# describe Sorter do
+describe Sorter do
 
-#   before :each do
-#     @four_items = [4, 6, 3, 2]
-#     @four_items_copy = @four_items.clone
-#     @four_items_sorted = @four_items_copy.sort
-#   end
+  before :each do
+    @four_items = [4, 6, 3, 2]
+    @four_items_copy = @four_items.clone
+    @four_items_sorted = @four_items_copy.sort
+  end
 
-#   describe "#swap_items_in_array" do
-#     it "should take 3 arguments" do
-#       expect(Sorter).to respond_to(:swap_items_in_array).with(3).arguments
-#     end
+  describe "#swap_items_in_array" do
+    it "should take 3 arguments" do
+      expect(Sorter).to respond_to(:swap_items_in_array).with(3).arguments
+    end
 
-#     it "should return the array" do
-#       expect(Sorter.swap_items_in_array(@four_items, 1, 2)).to be @four_items
-#     end
+    it "should return the array" do
+      expect(Sorter.swap_items_in_array(@four_items, 1, 2)).to be @four_items
+    end
 
-#     it "should do nothing if both indices are the same" do
-#       expect(Sorter.swap_items_in_array(@four_items, 2, 2)).to eq @four_items_copy
-#     end
-#   end
+    it "should do nothing if both indices are the same" do
+      expect(Sorter.swap_items_in_array(@four_items, 2, 2)).to eq @four_items_copy
+    end
+  end
 
-#   describe "#sort_array" do
-#     it "should take 1 argument" do
-#       expect(Sorter).to respond_to(:sort_array).with(1).argument
-#     end
+  describe "#sort_array" do
+    it "should take 1 argument" do
+      expect(Sorter).to respond_to(:sort_array).with(1).argument
+    end
 
-#     it "should return the same array object that was passed in" do
-#       expect(Sorter.sort_array(@four_items)).to be @four_items
-#     end
+    it "should return the same array object that was passed in" do
+      expect(Sorter.sort_array(@four_items)).to be @four_items
+    end
 
-#     it "should sort the array from lowest to highest" do
-#       expect(Sorter.sort_array(@four_items)).to eq @four_items_sorted
-#     end
+    it "should sort the array from lowest to highest" do
+      expect(Sorter.sort_array(@four_items)).to eq @four_items_sorted
+    end
 
-#     it "should not use the build in sort method" do
-#       @four_items.stub(:sort)
-#       @four_items.stub(:sort_by)
-#       @four_items.stub(:sort!)
-#       expect(Sorter.sort_array(@four_items)).to eq @four_items_sorted
-#     end
+    it "should not use the build in sort method" do
+      @four_items.stub(:sort)
+      @four_items.stub(:sort_by)
+      @four_items.stub(:sort!)
+      expect(Sorter.sort_array(@four_items)).to eq @four_items_sorted
+    end
 
-#     ## This line demonstrates the use of xit to pend a test
-#     xit "should sort a very large array from lowest to highest" do
-#       puts "Trying to sort a bit array of numbers!"
-#       large_array = RandomArrayGenerator.generate_random_array(3000, 1, 300000)
-#       large_array_sorted = large_array.sort
+    ## This line demonstrates the use of xit to pend a test
+    xit "should sort a very large array from lowest to highest" do
+      puts "Trying to sort a bit array of numbers!"
+      large_array = RandomArrayGenerator.generate_random_array(3000, 1, 300000)
+      large_array_sorted = large_array.sort
 
-#       startTime = Time.now
-#       print "Here we go....."
-#       expect(Sorter.sort_array(large_array)).to eq large_array_sorted
-#       endTime = Time.now
-#       puts "..... Done! in #{endTime - startTime} ms"
-#     end
+      startTime = Time.now
+      print "Here we go....."
+      expect(Sorter.sort_array(large_array)).to eq large_array_sorted
+      endTime = Time.now
+      puts "..... Done! in #{endTime - startTime} ms"
+    end
 
-#   end
+  end
 
-# end
+end
 
 
 
